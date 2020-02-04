@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <ul class="aktiviteterBg">
+    <h2>AKTIVITETER</h2>
+    <div class="aktiviteterGrid">
+      <% active.forEach(elem => {  %>
+
+
+      <div class="aktivitet">
+        <svg class="Bg" viewBox="0 0 201.305 94">
+          <path fill="rgba(50,50,69,1)" class="pathBg" d="M 0 0 L 201.3046875 0 L 201.3046875 94 L 0 94 L 0 0 Z">
+          </path>
+        </svg>
+        <svg class="before" viewBox="0 0 16 94">
+          <% switch (elem.color) {
+            case "green": %>
+            <path fill="#78952b" class="pathbefore" d="M 0 0 L 16 0 L 16 94 L 0 94 L 0 0 Z">
+                    <% break;
+            case "red": %>
+            <path fill="#A83331" class="pathbefore" d="M 0 0 L 16 0 L 16 94 L 0 94 L 0 0 Z">
+                    <% break;
+            case "purple": %>
+            <path fill="#7D2772" class="pathbefore" d="M 0 0 L 16 0 L 16 94 L 0 94 L 0 0 Z">
+                    <% break;
+            case "blue": %>
+            <path fill="#3674B5" class="pathbefore" d="M 0 0 L 16 0 L 16 94 L 0 94 L 0 0 Z">
+                    <% break;
+            default: case "grey": %>
+            <path fill="#808080" class="pathbefore" d="M 0 0 L 16 0 L 16 94 L 0 94 L 0 0 Z">
+                    <% break;
+            } %>
+
+         
+          </path>
+        </svg>
+        <div class="holdNavn">
+          <span><%= elem.class %></span>
+        </div>
+        <svg class="tidBg" viewBox="0 0 167 19">
+          <path fill="rgba(36,36,57,1)" class="pathtidBg"
+            d="M 9.5 0 L 157.5 0 C 162.7467041015625 0 167 4.253294467926025 167 9.5 C 167 14.74670600891113 162.7467041015625 19 157.5 19 L 9.5 19 C 4.253294467926025 19 0 14.74670600891113 0 9.5 C 0 4.253294467926025 4.253294467926025 0 9.5 0 Z">
+          </path>
+        </svg>
+        <div class="hold">
+          <span>Hold</span>
+        </div>
+        <div class="emneNavn">
+          <span><%=  elem.friendly_name %></span>
+        </div>
+        <div class="emne">
+          <span>Emne</span>
+        </div>
+        <div class="tidStart">
+          <span><%= elem.time %></span>
+        </div>
+        <div class="lokaleNummer">
+          <span><%= elem.classroom %></span>
+        </div>
+        <div class="tid">
+          <span>Tid</span>
+        </div>
+        <div class="lokale">
+          <span>Lokale</span>
+        </div>
+      </div>
+
+      <% }) %>
+    </div>
+    <img class="logo" src="/assets/img/logo1.png" alt="logo">
+  </ul>
+  <main>
+    <section class="row1">
+    
+      <section class="overetage"><h3>OVERETAGEN N-GANGEN</h3><p>N200 - N228</p></section>
+      <section class="underetage"><h3>UNDERETAGEN N-GANGEN</h3><p>N228 - N500</p></section>
+      
+    </section>
+    <section class="row2">
+      <img class="logo" src="/assets/img/logo2.png" alt="logo">
+    
+      <section class="weatherdatetime"><span class="temp"><%= weatherData.CurrentData.temperature %>°C</span><span class="skytext"><%= weatherData.CurrentData.skyText %></span><span class="date">Mandag 3. februar 2020</span><span class="time">08:51</span></section>
+      <article class="article1"><p class="datestamp">27. Januar 2020</p><h2 class="title">Mediehus Projekt i Marts</h2><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate nesciunt a iusto debitis in quis expedita, perferendis aspernatur animi, consectetur quisquam, cumque itaque facilis possimus aliquid repudiandae vero provident eos?</p></article>
+      <article class="article2"><p class="datestamp">27. Januar 2020</p><h2 class="title">Ny Kantine på Medie</h2><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate nesciunt a iusto debitis in quis expedita, perferendis aspernatur animi, consectetur quisquam, cumque itaque facilis possimus aliquid repudiandae vero provident eos?</p></article>
+
+
+    </section>
+
+
+  </main>
+</body>
+
+</html>

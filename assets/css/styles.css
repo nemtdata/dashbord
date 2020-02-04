@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700&display=swap");
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+  background: #dddddd;
+}
+
+.aktiviteterBg {
+  list-style-type: none;
+  background-color: #43425d;
+  width: 415px;
+  height: 100vh;
+  position: absolute;
+}
+
+h2 {
+  padding: 20px;
+  letter-spacing: 3px;
+}
+
+.aktiviteterGrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: ()[1fr];
+      grid-template-rows: repeat(1fr);
+  grid-gap: 10px;
+}
+
+.blue {
+  fill: #3674B5;
+}
+
+.green {
+  fill: #78952b;
+}
+
+.purple {
+  fill: #7D2772;
+}
+
+.red {
+  fill: #A83331;
+}
+
+.aktivitet {
+  position: relative;
+  width: 200px;
+  height: 94px;
+  overflow: visible;
+}
+
+.Bg {
+  overflow: visible;
+  position: absolute;
+  width: 200px;
+  height: 94px;
+  left: 0px;
+  top: 0px;
+  -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+          transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+.before {
+  overflow: visible;
+  position: absolute;
+  width: 16px;
+  height: 94px;
+  left: 0px;
+  top: 0px;
+  -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+          transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+.holdNavn {
+  position: absolute;
+  left: 95px;
+  top: 49px;
+  overflow: visible;
+  width: 68px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.tidBg {
+  overflow: visible;
+  position: absolute;
+  width: 167px;
+  height: 19px;
+  left: 26px;
+  top: 10px;
+  -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+          transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+.hold {
+  position: absolute;
+  left: 34px;
+  top: 49px;
+  overflow: visible;
+  width: 25px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+.emneNavn {
+  position: absolute;
+  left: 95px;
+  top: 67px;
+  overflow: visible;
+  width: 85px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.emne {
+  position: absolute;
+  left: 34px;
+  top: 67px;
+  overflow: visible;
+  width: 30px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+.tidStart {
+  position: absolute;
+  left: 95px;
+  top: 11px;
+  overflow: visible;
+  width: 30px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.lokaleNummer {
+  position: absolute;
+  left: 95px;
+  top: 31px;
+  overflow: visible;
+  width: 28px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.tid {
+  position: absolute;
+  left: 34px;
+  top: 11px;
+  overflow: visible;
+  width: 18px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.lokale {
+  position: absolute;
+  left: 34px;
+  top: 31px;
+  overflow: visible;
+  width: 34px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+main {
+  margin-left: 415px;
+  padding: 2rem;
+  display: -ms-grid;
+  display: grid;
+  gap: 2rem;
+  -ms-grid-columns: 858px 1fr;
+      grid-template-columns: 858px 1fr;
+}
+
+main .row1, main .row2 {
+  display: -ms-grid;
+  display: grid;
+  gap: 2rem;
+}
+
+main .row1 {
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+}
+
+main .row1 .overetage, main .row1 .underetage {
+  height: 473px;
+  background: #00000033;
+  border-radius: 6px;
+}
+
+main .row2 {
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+}
+
+main .row2 .weatherdatetime {
+  -ms-grid-row: 2;
+  grid-row: 2;
+  background: #00000033;
+  border-radius: 6px;
+}
+
+main .row2 .article1 {
+  -ms-grid-row: 3;
+  grid-row: 3;
+  background: #00000033;
+  border-radius: 6px;
+}
+
+main .row2 .article2 {
+  -ms-grid-row: 4;
+  grid-row: 4;
+  background: #00000033;
+  border-radius: 6px;
+}
+/*# sourceMappingURL=styles.css.map */
